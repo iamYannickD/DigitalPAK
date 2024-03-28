@@ -1,0 +1,389 @@
+:root
+{
+    --main-size: 35px;
+    --main-size-md: 30px;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+header
+{
+    margin: none;
+    height: 50px;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient( rgb(68, 157, 216),rgb(241, 237, 169));
+    padding:  5px 5%;
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+    z-index: 100;
+}
+
+
+header h1
+{
+    text-align: center;
+    font-size: 21px;
+    color: darkblue;
+    text-shadow: gray 1px 1px 1px;
+    text-transform: uppercase;
+}
+
+html, body
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#logo-camer
+{
+    width: var(--main-size);
+    height: var(--main-size);
+    margin: 5px;
+}
+
+#logo
+{
+    width: var(--main-size);
+    height: var(--main-size);
+    margin: 1px;
+    border-radius: 50%;
+}
+
+#container
+{
+    display: flex;
+    flex: 1;
+    margin-top: 10px;
+    /*border: solid black 1px;*/
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+#left-menu
+{
+    border: solid 1px black;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 5px;
+    background: linear-gradient( rgb(68, 157, 216),rgb(241, 237, 169));
+    color: black;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: -305px;
+    bottom: 0;
+    transition: all 500ms ease-in-out;
+    z-index: 10000;
+}
+
+#left-menu h2
+{
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center;
+    padding: 8px 27px;
+    position: relative;
+}
+
+#left-menu h2  {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-content.active i {
+    transform: rotate(-180deg);
+    
+}
+
+.title-content i {
+    transition: all 500ms linear;
+
+}
+
+.title-content  {
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.title-content:hover  {
+    background-color: rgb(10, 126, 228);
+    border-radius: 8px;
+    transform: scale(1.01);
+}
+
+.floating-btn
+{
+    border-radius: 100%;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 15px;
+    padding: 15px 18px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 30px 30px 0;
+    z-index: 10000;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px gray;
+    opacity: 0.8;
+}
+
+.floating-btn:hover
+{
+    opacity: 1;
+}
+
+#map
+{
+    /*border: solid 1px black;*/
+    flex: 1;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#map h1
+{
+    text-align: center;
+}
+
+#show-navbar
+{
+    margin-left: 15px;
+    font-size: 22px;
+    color: black;
+}
+
+#show-navbar i
+{
+    padding: 5px;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 35px;
+    text-align: center;
+    transition: color 500ms, border 500ms;
+}
+
+#show-navbar i:hover
+{
+    color: blue;
+    border-color: blue;
+}
+
+#show-navbar i:active
+{
+    color: green;
+    border-color: green;
+}
+
+.h-title
+{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.h-title .point
+{
+    border: solid rgb(53, 53, 53) 1px;
+    box-shadow: gray 1px 1px 1px;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+#color-green
+{
+    border-color: green;
+    background-color: green;
+}
+
+#color-yellow
+{
+    border-color: yellow;
+    background-color: yellow;
+}
+
+#color-red
+{
+    border-color: red;
+    background-color: red;
+}
+
+.h-options
+{
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.h-options div
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.color-box
+{
+    border: solid 1px black;
+    width: 25px;
+    height: 15px;
+}
+
+#categorie-list
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px;
+}
+
+.categorie-elt
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.categorie-elt label
+{
+    margin-top: 5px;
+}
+
+.search-box
+{
+    position: relative;
+    margin: 7px 15px 20px 15px;
+    font-size: 15px;
+}
+
+.search-box i
+{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-box i:hover
+{
+    cursor: pointer;
+}
+
+.search-box input[type="search"]
+{
+    width: 100%;
+    font-size: 18px;
+    padding: 5px 20px;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#container.reduced
+{
+    margin-left: 305px;
+}
+
+
+table
+{
+    border-collapse: collapse;
+    margin: 15px 25px;
+}
+
+td
+{
+    border: rgb(255, 255, 255) solid 1px;
+    padding: 5px;
+    color: white;
+}
+
+#grand-fond
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -10000;
+    background-color: darkorchid;
+}
+
+#fond-table 
+{
+    background-color: rgb(75, 69, 163);
+    box-shadow: 0 0 15px rgb(61, 43, 226);
+    border-radius: 20px;
+    
+}
+
+#titre-popup
+{
+    color: white;
+    text-align: center;
+    font-family: 20px;
+}
+
+@media all and (max-width: 512px)
+{
+    header h1
+    {
+        font-size: 12px;
+    }
+
+    #logo-camer
+    {
+        width: var(--main-size-md);
+        height: var(--main-size-md);
+        margin: 5px;
+    }
+
+    #logo
+    {
+        width: var(--main-size-md);
+        height: var(--main-size-md);
+        margin: 5px;
+    }
+
+    #container.reduced
+    {
+        margin-left: 0;
+    }
+
+    #left-menu.reduced
+    {
+        left: 0;
+    }
+
+    #show-navbar
+    {
+        margin-left: 15px;
+        font-size: 18px;
+        color: black;
+    }
+
+    #show-navbar i
+    {
+        border-radius: 5px;
+        width: 30px;
+    }
+}
+
+#statut-content , #filtres-content, #search-content{
+    display: none;
+}
+
+#map {
+    border-radius: 7px;
+    border: solid 1px blue;
+}

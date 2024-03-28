@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training JavaScript</title>
+    <link rel="shortcut icon" href="img/Autre-logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!--leaflet css-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <link rel="stylesheet" href="./plugins/Leaflet.Coordinates-master/dist/Leaflet.Coordinates-0.1.5.css"/>
+  <link rel="stylesheet" href="./plugins/leaflet-measure-master/leaflet-measure-master/src/leaflet-measure.css"/>
+  <!--geolocation-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.css" />
+
+   <!--leaflet draw plugins-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
+
+   <link rel="stylesheet" href="css/style.css">
+
+    <title>Training JavaScript</title>
+</head>
+<body>
+    </div>
+
+    <header>
+        <a href="" id="show-navbar">
+            <i class="fa fa-bars"></i>
+        </a>
+        <!--<img src="img/logo-camer.png" alt="logo-camer" id="logo-camer">-->
+        
+        <h1>Localisation des concessions et infrastructures populaires</h1>
+        
+        <img src="./img/logo.jpg" alt="logo" id="logo">
+    </header>
+
+    <div id="container">
+        <a href="./adddata.php" class="floating-btn" title="Enregistrer"><i class="fas fa-plus fa-sm"></i></a>
+
+        <div id="left-menu">
+
+                <h2 id ="title-statut-content" class="title-content"> <div class="title"> Statut de paiement </div> <i class="fa fa-angle-down dropdown" aria-hidden="true"></i></h2>            
+            <div id="statut-content" class="payment-content" >
+                <div class="h-title"><div class="point"></div> Concession allouées</div>
+                <div class="h-options">
+                    <div>Totalement payées <div id="color-green" class="color-box"></div></div>
+                    <div>Partiellement payées <div id="color-yellow" class="color-box"></div></div>
+                    <div>Non payées <div id="color-red" class="color-box"></div></div>
+                </div>
+                
+            </div>
+            <hr>
+
+            <h2 id ="title-statut-content1" class="title-content"><div class="title">Filtres </div><i class="fa fa-angle-down dropdown" aria-hidden="true"></i></h2>
+            <div id="filtres-content">
+                <div style="margin-left: 15px;">Par catégorie d'entreprises</div>
+
+                <div id="categorie-list">
+                    <div class="categorie-elt">
+                        <input type="radio" name="categorie" id="tous">
+                        <label for="tous">Tous</label>
+                    </div>
+                    <div class="categorie-elt">
+                        <input type="radio" name="categorie" id="tpe">
+                        <label for="tpe">TPE</label>
+                    </div>
+                    <div class="categorie-elt">
+                        <input type="radio" name="categorie" id="pe">
+                        <label for="pe">PE</label>
+                    </div>
+                    <div class="categorie-elt">
+                        <input type="radio" name="categorie" id="ge">
+                        <label for="ge">GE</label>
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+
+            <h2 id ="title-statut-content2" class="title-content"> <div class="title">Recherches </div><i class="fa fa-angle-down dropdown" aria-hidden="true"></i></h2>
+            <div id="search-content">
+                <div style="margin-left: 15px;">Par Numero d'Identifiant Unique</div>
+                <div class="search-box">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="search" name="" id="search-by-id">
+                </div>
+
+                <div style="margin-left: 15px;">Par Numero de Concession</div>
+                <div class="search-box">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="search" name="" id="search-by-id">
+                </div>
+            </div> 
+        </div>
+            
+        <div id="map">
+            
+        </div>
+
+    </div>
+
+    <!-- Scripts Javascripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Leaflet.Coordinates-0.1.5.min.js"></script>
+    <script src="./plugins/Leaflet.Coordinates-master/dist/Leaflet.Coordinates-0.1.5.min.js"></script>
+    <script src="./plugins/Leaflet.Coordinates-master/dist/Leaflet.Coordinates-0.1.5.src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+    <script src="./plugins/leaflet-measure-master/leaflet-measure-master/src/leaflet-measure1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+    <script src="./data/cd.js"></script>
+    <script src="./data/concessions.js"></script>
+    <script src="./data/arrondissements.js"></script>
+    <script src="./data/tampon.js"></script>
+    <script src="./assets/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

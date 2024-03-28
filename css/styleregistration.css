@@ -1,0 +1,78 @@
+
+html {
+    background: url("../img/70496420_310911759725317_3825284958298046464_n.jpg");    
+}
+
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    /*background-repeat: no-repeat;*/
+    height: 100%;
+    
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    width: 400px;
+    border: solid 1px black;
+    padding: 0px 20px;
+    backdrop-filter: blur(10px);
+   
+}
+
+#container i {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 15px;
+}
+
+#titre {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+input[type="text"], input[type="email"] {
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: solid 1px black;
+} 
+
+
+
+button:active {
+    background-color: aqua;
+}
+
+input[type="email"]:not(:valid){
+    color: red;
+}
+
+@media all and  (max-width:512px)
+    {
+    #container {
+        width: 80vw;
+    }
+    }
+input[type="submit"] {
+
+ display: block;
+    margin: 10px;
+    padding: 5px;
+    margin: 0px 100px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid 1px black;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}

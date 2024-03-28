@@ -1,0 +1,80 @@
+html {
+    background: url("../img/70496420_310911759725317_3825284958298046464_n.jpg");    
+}
+
+body  {
+    font-family: cursive;
+}
+
+#flou{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1000;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+.container{
+    padding: 25px;
+    color: aliceblue;
+ 
+}
+
+button[type=submit] {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+}
+
+button[name=refuse] {
+    background-color: rgb(117, 7, 7);
+    width: 50%;
+    color: white;
+    background-origin: none;
+    padding: 5px 0px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+input[type="submit"] {
+    background-color: rgb(117, 7, 7);
+    width: 50%;
+    color: white;
+    background-origin: none;
+    padding: 5px 0px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+button:hover {
+ background-color: rgb(29, 27, 27);
+}
+
+button[name=refuse]:hover{
+    background-color: brown;
+}
+
+@media only screen and (max-width: 540px){
+    form{
+        width: 100%;
+    }
+};
+    
