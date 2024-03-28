@@ -1,0 +1,135 @@
+:root
+{
+    --color-scheme: rgba(214, 214, 214, 0.568);
+    --text-color-scheme: rgba(214, 214, 214, 0.904);
+    --shadow-color: rgba(0, 0, 0, 0.911);
+    --placeholder-color-scheme: rgba(214, 214, 214, 0.705);
+}
+
+::placeholder
+{
+    color: var(--placeholder-color-scheme);
+}
+
+html
+{
+    background-image: url("../img/bg5.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html, body
+{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container
+{
+    margin: auto;
+    border: solid var(--color-scheme) 0.5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 35px var(--shadow-color);
+    padding: 10px;
+    flex: 1;
+    backdrop-filter: blur(5px);
+    width: 400px;
+}
+
+#main-form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#main-form i
+{
+    font-size: 72px;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--text-color-scheme);
+}
+
+#main-form h1
+{
+    text-align: center;
+    color: var(--text-color-scheme);
+}
+
+#main-form input[type="text"],
+#main-form input[type="email"],
+#main-form input[type="password"]
+{
+    display: block;
+    padding: 8px 17px;
+    margin: 5px 1px;
+    border-radius: 5px;
+    border: solid 1px var(--color-scheme);
+    background-color: transparent;
+    font-size: 18px;
+    outline: none;
+    color: green;
+}
+
+div#remember
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3px 1px;
+    margin: 7px 1px;
+}
+
+div#remember label
+{
+    color: var(--text-color-scheme);
+}
+
+a
+{
+    text-decoration: none;
+    color: var(--text-color-scheme);
+    transition: all 500ms;
+}
+
+a:hover
+{
+    color: green;
+}
+
+#main-form input[type="text"]:focus,
+#main-form input[type="email"]:focus,
+#main-form input[type="password"]:focus
+{
+    outline: solid green 1px;
+}
+
+#main-form input[type="email"]:not(:valid)
+{
+    outline: solid red 1px;
+    color: red;
+}
+#main-form input[type="submit"]
+{
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 10px 7px;
+    border-radius: 5px;
+    border: solid var(--color-scheme) 1px;
+    cursor: pointer;
+}
+
+#main-form p
+{
+    color: var(--text-color-scheme);
+}
+
+@media all and (max-width: 512px)
+{
+    #container
+    {
+        width: 80vw;
+    }
+}
