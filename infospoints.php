@@ -6,14 +6,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Infos sur le points </title>
+    <title> Infos sur les points </title>
     <link rel="stylesheet" href="./css/styleinfospoints.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
 <body>
     <div id="flou"></div>
     <section class="container">
-        <header> INFORMATIONS DU POINTS </header>
+        <header> INFORMATIONS DU POINT </header>
         <form action="#" class="form" method="post" enctype="multipart/form-data">
             <div class="input-box">
                 <label>Matricule du point</label>

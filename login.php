@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> page de connection </title>
+    <title> Page de Connection </title>
     <link rel="stylesheet" href="./css/stylelogin.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
