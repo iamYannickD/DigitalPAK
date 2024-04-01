@@ -31,6 +31,11 @@
    {
     header('Location: http:infospoints.php');
    }
+   
+    if(isset($_POST['refuse']))
+   {
+    header('Location: http:index.html');
+   }
    ?>
 </body>
 
