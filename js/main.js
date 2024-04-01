@@ -25,28 +25,6 @@ showNavbar.addEventListener("click", (e) => {
     updateNavBar();
 });
 
-/*
-var showstatutcontent = document.getElementById("statut-content");
-var showfiltrescontent = document.getElementById("filtres-content");
-var showssearchcontent = document.getElementById("search-content");
-
-var btn_title1 = document.getElementById("statut-content")
-var update_content1 = document.getElementById("title-statut-content")
-
-function updatestatutcontent () {
-    update_content1.addEventListener("click", function() {
-        if (btn_title1.style.display == "none")
-        {
-            btn_title1.style.display = "block"
-        }
-        else
-        {
-            btn_title1.style.display = "none" 
-        }
-    })
-}
-updatestatutcontent (); */
-
 var showstatutcontent = $("#statut-content")
 var showfiltrescontent = $("#filtres-content")
 var showssearchcontent = $("#search-content")
@@ -81,8 +59,277 @@ function updatestatutcontent3 () {
 updatestatutcontent ();
 updatestatutcontent2 ();
 updatestatutcontent3 ();
+var concessdata = L.geoJSON(concessionsJson, {
+    style: function(feature) {
+        switch (feature.properties.Cat_Conces) {
+            case 'GE': return {color: "red"};
+            case 'ME':   return {color: "yellow"};
+            case 'TPE/PE':   return {color: "green"};
+        }
+    },
+    onEachFeature:function(feature,layer){
+        layer.bindPopup( `<div class="wrapper">
+        <div class="table">
+        <div class="row header">
+        
+        <div class="cell">
+        Propriété
+        </div>
+        <div class="cell">
+        Valeur
+        </div>
+        </div>
+        <div class="row">
+        <div class="cell">
+        Layer
+        </div>
+        <div class="cell">
+        `+feature.properties.LAYER+`
+        </div>
+        </div>
+        <div class="row">
+        <div class="cell">
+        GM_TYPE
+        </div>
+        <div class="cell">
+        `+feature.properties.GM_TYPE+`
+        </div>
+        </div>
+        <div class="row">
+        <div class="cell">
+        Statut_Pai
+        </div>
+        <div class="cell">
+        `+feature.properties.Statut_Pai+`
+        </div>
+        </div>
+        <div class="row">
+        <div class="cell">
+        Cat_Conces
+        </div>
+        <div class="cell">
+        `+feature.properties.Cat_Conces+`
+        </div>
+        </div>
+        <div class="row">
+        <div class="cell">
+        Numero_Con
+        </div>
+        <div class="cell">
+        `+feature.properties.Numero_Con+`
+        </div>
+        </div>
+        <div class="row">
+        <div class="cell">
+        Nom_Conces
+        </div>
+        <div class="cell">
+        `+feature.properties.Nom_Conces+`
+        </div>
+        </div>
+        <div class="row">
+        <div class="cell">
+        NIU_Conces
+        </div>
+        <div class="cell">
+        `+feature.properties.NIU_Conces+`
+        </div>
+        </div>
+        </div>
+        </div>
+        `);
+    }
+}); 
+var me=L.geoJSON(concessionsJson,{
+    filter:function(feature){
+       if(feature.properties.Cat_Conces==="ME")return true;   
+    },
+    style:function(feature){
+        return {color:'yellow'}
+    },
+    onEachFeature:function(feature,layer){
+        layer.bindPopup(`<div id="grand-fond"> </div>
+<div id="fond-table">
+            
+            <table>
+                <tr>
+                    <td>Propriété</td>
+                    <td>Valeur</td>
+                </tr>
+                <tr>
+                    <td>LAYER</td>
+                    <td>`+feature.properties.LAYER+`</td>
+                </tr>
+                <tr>
+                    <td>GM_TYPE</td>
+                    <td>`+feature.properties.GM_TYPE+`</td>
+                </tr>
+                <tr>
+                    <td>Statut_Pai</td>
+                    <td>`+feature.properties.Statut_Pai+`</td>
+                </tr>
+                <tr>
+                    <td>Cat_Conces</td>
+                    <td>`+feature.properties.Cat_Conces+`</td>
+                </tr>
+                <tr>
+                    <td>Numero_Con</td>
+                    <td>`+feature.properties.Numero_con+`</td>
+                </tr>
+                <tr>
+                    <td>Nom_Conces</td>
+                    <td>`+feature.properties.Nom_Conces+`</td>
+                </tr>
+                <tr>
+                    <td>NIU_Conces</td>
+                    <td>`+feature.properties.NIU_Conces+`</td>
+                </tr>
+            </table>
+            </div>`);
+    }
+}); 
+var ge=L.geoJSON(concessionsJson,{
+    filter:function(feature){
+       if(feature.properties.Cat_Conces==="GE")return true;   
+    },
+    style:function(feature){
+        return {color:'red'}
+    },
+    onEachFeature:function(feature,layer){
+        layer.bindPopup(`<div id="grand-fond"> </div>
+<div id="fond-table">
+            
+            <table>
+                <tr>
+                    <td>Propriété</td>
+                    <td>Valeur</td>
+                </tr>
+                <tr>
+                    <td>LAYER</td>
+                    <td>`+feature.properties.LAYER+`</td>
+                </tr>
+                <tr>
+                    <td>GM_TYPE</td>
+                    <td>`+feature.properties.GM_TYPE+`</td>
+                </tr>
+                <tr>
+                    <td>Statut_Pai</td>
+                    <td>`+feature.properties.Statut_Pai+`</td>
+                </tr>
+                <tr>
+                    <td>Cat_Conces</td>
+                    <td>`+feature.properties.Cat_Conces+`</td>
+                </tr>
+                <tr>
+                    <td>Numero_Con</td>
+                    <td>`+feature.properties.Numero_con+`</td>
+                </tr>
+                <tr>
+                    <td>Nom_Conces</td>
+                    <td>`+feature.properties.Nom_Conces+`</td>
+                </tr>
+                <tr>
+                    <td>NIU_Conces</td>
+                    <td>`+feature.properties.NIU_Conces+`</td>
+                </tr>
+            </table>
+            </div>`);
+    }
+}); 
+function search()
+{
+    map.removeLayer(tpe);
+    map.removeLayer(me);
+    map.removeLayer(ge);
+    map.removeLayer(concessdata);
+    input=document.getElementById('search-by-id').value; 
+   
+    var sear=L.geoJSON(concessionsJson,{
+        filter:function(feature){
+           if(feature.properties.LAYER==input)return true;   
+        },
+        style:function(feature){
+            return {color:'white'}
+        },
+        onEachFeature:function(feature,layer){
+            layer.bindPopup(`<div id="grand-fond"> </div>
+    <div id="fond-table">
+                
+                <table>
+                    <tr>
+                        <td>Propriété</td>
+                        <td>Valeur</td>
+                    </tr>
+                    <tr>
+                        <td>LAYER</td>
+                        <td>`+feature.properties.LAYER+`</td>
+                    </tr>
+                    <tr>
+                        <td>GM_TYPE</td>
+                        <td>`+feature.properties.GM_TYPE+`</td>
+                    </tr>
+                    <tr>
+                        <td>Statut_Pai</td>
+                        <td>`+feature.properties.Statut_Pai+`</td>
+                    </tr>
+                    <tr>
+                        <td>Cat_Conces</td>
+                        <td>`+feature.properties.Cat_Conces+`</td>
+                    </tr>
+                    <tr>
+                        <td>Numero_Con</td>
+                        <td>`+feature.properties.Numero_con+`</td>
+                    </tr>
+                    <tr>
+                        <td>Nom_Conces</td>
+                        <td>`+feature.properties.Nom_Conces+`</td>
+                    </tr>
+                    <tr>
+                        <td>NIU_Conces</td>
+                        <td>`+feature.properties.NIU_Conces+`</td>
+                    </tr>
+                </table>
+                </div>`);
+        }
+    }).addTo(map);
+
+}
+function charge()
+{
+    
+    if(document.getElementById('tous').checked)
+    {
+        map.removeLayer(tpe);
+        map.removeLayer(me);
+        map.removeLayer(ge);
+        concessdata.addTo(map);
+        concessdata.bindPopup('-'+feature.properties.Cat_Conces+'-');
+    }
+
+    if(document.getElementById('tpe').checked)
+    {
+        map.removeLayer(concessdata);
+        map.removeLayer(me);
+        map.removeLayer(ge);
+        tpe.addTo(map);
+    }
+    if(document.getElementById('me').checked)
+    {
+        map.removeLayer(concessdata);
+        map.removeLayer(tpe);
+        map.removeLayer(ge);
+        me.addTo(map);
+    }
+    if(document.getElementById('ge').checked)
+    {
+        map.removeLayer(concessdata);
+        map.removeLayer(tpe);
+        map.removeLayer(me);
+        ge.addTo(map);
+    }
 
 
+}
 
 
 $(".title-content").click( function() {
@@ -125,88 +372,10 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
    var singleMarker = L.marker([7.3696495, 12.3445856]);
    var popup = singleMarker.bindPopup( 'this is cameroon').openPopup()
    popup.addTo(map)
+    
+    // test le changement de styles
 
-    //concession du port autonome de kribi
-    var concessdata = L.geoJSON(concessionsJson, {
-        onEachFeature: function (feature,layer) {
-            layer.bindPopup(feature.properties.GM_TYPE)
-        }
-    });
-    concessdata.addTo(map)
-
-    // faire le tableau dans le popup
-
-    concessdata.on('click', (e) => {
-        concessdata.bindPopup(`
-        <div id="grand-fond"> </div>
-        <div id="fond-table">
-            <img src="img/Dock.jpg" class="popup-image">
-            <h4 id="titre-popup">Image Title</h4>
-            <table>
-                <tr>
-                    <td>Propriété</td>
-                    <td>Valeur</td>
-                </tr>
-                <tr>
-                    <td>LAYER</td>
-                    <td><script></script></td>
-                </tr>
-                <tr>
-                    <td>Propriété 2</td>
-                    <td>Valeur 2</td>
-                </tr>
-                <tr>
-                    <td>Propriété 3</td>
-                    <td>Valeur 3</td>
-                </tr>
-                <tr>
-                    <td>Propriété 4</td>
-                    <td>Valeur 4</td>
-                </tr>
-                <tr>
-                    <td>Propriété 5</td>
-                    <td>Valeur 5</td>
-                </tr>
-                <tr>
-                    <td>Propriété 6</td>
-                    <td>Valeur 6</td>
-                </tr>
-                <tr>
-                    <td>Propriété 7</td>
-                    <td>Valeur 7</td>
-                </tr>
-                <tr>
-                    <td>Propriété 8</td>
-                    <td>Valeur 8</td>
-                </tr>
-                <tr>
-                    <td>Propriété 9</td>
-                    <td>Valeur 9</td>
-                </tr>
-                <tr>
-                    <td>Propriété 10</td>
-                    <td>Valeur 10</td>
-                </tr>
-                <tr>
-                    <td>Propriété 11</td>
-                    <td>Valeur 11</td>
-                </tr>
-            </table>
-            </div>
-            
-        `);
-    })
-
-
-
-    // geojson
-    var arrondissementsdata = L.geoJSON(arrondissementsJson, {
-        onEachFeature:function(feature,layer){
-            layer.bindPopup(feature.properties.SUBDIV)
-        }
-    });
-    arrondissementsdata.addTo(map)
-
+                 
 
    //Layer controller
    
@@ -223,24 +392,6 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     };
 
     var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
-
-    //routine
-
-    /*
-    map.on('click' , function (e) {
-        console.log(e)
-        var firstMarker = L.marker([7.3696495, 12.3445856]).addTo(map);
-        var secondMarker = L.marker(e.latlng).addTo(map)
-    //click event
-        L.Routing.control({
-            waypoints: [
-                L.latLng([7.3696495, 12.3445856]),
-                L.latLng(e.latlng)
-            ]
-        }).addTo(map);
-    })
-
-    */
 
      // search location
 
@@ -262,38 +413,6 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
      // scale
 
      L.control.scale().addTo(map);
-
-    // draw geometry
-/*
-    var drawnFeatures = new L.FeatureGroup();
-    map.addLayer(drawnFeatures);
-
-    var drawControl = new L.Control.Draw({
-        edit: { 
-            featureGroup: drawnFeatures,
-            remove: false
-        }
-    });
-    map.addControl(drawControl);
-
-    map.on("draw:created", function (e) {
-        console.log(e)
-        var type = e.layerType;
-        var layer = e.layer;
-        drawnFeatures.addLayer(layer);
-    });
-
-    map.on("draw:edited", function (e) {
-        console.log(e)
-        var type = e.layerType;
-        var layers = e.layer;
-        
-        layers.eachLayer(function(layer){
-            console.log(layer)
-        })
-    });
-
-    */
    
     // Leaflet Measure
 
@@ -307,3 +426,7 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     // geolocation
 
     L.control.locate().addTo(map);
+
+
+
+   
