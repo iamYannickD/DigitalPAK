@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Map d'ajout du Point</title>
+    <title> Map d'ajout du point</title>
     <link rel="stylesheet" href="./css/stylemapdata.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
 
@@ -18,7 +18,7 @@
 <body>
     <form method="post">
     <div id="map">
-        <a href="./adddata.html" class="floating-btn" title="Enregistrer" name='end'><i class="fas fa-plus fa-sm"></i></a>
+        <a href="./adddata.php" class="floating-btn" title="Enregistrer" name='end'><i class="fas fa-plus fa-sm"></i></a>
     </div>
 </form>
     
