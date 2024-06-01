@@ -21,6 +21,17 @@ To optimize the management of the port domain, PAK decided to develop a web plat
    - For this release, ensure you have:
      - [Visual Studio Code](https://code.visualstudio.com/download)
      - [WampServer](https://sourceforge.net/projects/wampserver/)
+3. Some images of the platform
+
+Fill in the information on a vector (point) :
+![image](https://github.com/iamYannickD/DigitalPAK/assets/45791060/ddb57530-c2d1-4333-afb5-d5f23cbd42c4)
+
+full screen view of the platform
+![image](https://github.com/iamYannickD/DigitalPAK/assets/45791060/2af8b0c8-a5f0-4db0-8377-e10ddccf6449)
+
+Add a new vector (ppint, line, polygon)
+![image](https://github.com/iamYannickD/DigitalPAK/assets/45791060/6bb43534-d28d-4833-af92-4f069873617e)
+
 
 ## Contribution
 
