@@ -41,7 +41,7 @@ Contributions are welcome! Please submit a pull request with a clear description
 - Yannick Doungmo ([GitHub](https://github.com/iamYannickD))
 - Jovanic Abega ([GitHub](https://github.com/XLEPROGRAMMEUR))
 - Demeveng Derrick ([GitHub](https://github.com/DemevengDerrick))
-- Joseph Desire Ayangma
+- Joseph Desire Ayangma ([GitHub](https://github.com/JosephAyangma))
 
 ## License
 
