@@ -23,6 +23,7 @@ To optimize the management of the port domain, PAK decided to develop a web plat
      - [WampServer](https://sourceforge.net/projects/wampserver/)
        
 3. Some images of the platform
+
 Fill in the information on a vector (point) :
 ![image](https://github.com/iamYannickD/DigitalPAK/assets/45791060/ddb57530-c2d1-4333-afb5-d5f23cbd42c4)
 
