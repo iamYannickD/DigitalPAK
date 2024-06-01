@@ -1,2 +1,5 @@
 # Code owners for the entire repository
 * @iamYannickD @DemevengDerrick
+
+# Code owner for JavaScript files
+*.js @XLEPROGRAMMEUR
