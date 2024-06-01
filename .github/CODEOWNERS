@@ -3,3 +3,12 @@
 
 # Code owner for JavaScript files
 *.js @XLEPROGRAMMEUR
+
+# Code owner for PHP files
+*.php @XLEPROGRAMMEUR
+
+# Code owner for HTML files
+*.html @JosephAyangma
+
+# Code owner for CSS files
+*.css @JosephAyangma
