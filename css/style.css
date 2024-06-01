@@ -295,33 +295,38 @@ html, body
 }
 
 
+.leaflet-popup-tip {
+    background: rgb(87, 87, 87);
+}
+
+.leaflet-popup-content-wrapper {
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(60px);
+    height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
 table
 {
     border-collapse: collapse;
-    margin: 15px 25px;
+    margin: 5px 10px;
 }
 
 td
 {
-    border: rgb(255, 255, 255) solid 1px;
+    border: rgb(95, 91, 91) solid 1.5px;
     padding: 5px;
     color: white;
 }
 
-#grand-fond
-{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: -10000;
-    background-color: darkorchid;
-}
-
 #fond-table 
 {
-    background-color: rgb(75, 69, 163);
+    padding: 0px;
+    padding-bottom: 10px;
+    background: transparent;
     box-shadow: 0 0 15px rgb(61, 43, 226);
     border-radius: 20px;
     

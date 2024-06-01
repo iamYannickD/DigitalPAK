@@ -26,10 +26,14 @@
 
     </div>
    </form>
-   <?php
+  
+</body>
+
+</html>
+<?php
    if(isset($_POST['mbref']))
    {
-    header('Location: http:infospoints.php');
+    header('Location: http:map.html');
    }
    
     if(isset($_POST['refuse']))
@@ -37,6 +41,3 @@
     header('Location: http:index.html');
    }
    ?>
-</body>
-
-</html>

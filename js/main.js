@@ -98,7 +98,7 @@ var map = L.map('map',{
 }).setView([2.71638889, 9.86361111], 15);
 map.zoomControl.setPosition('topleft');
 map.options.minZoom=14;
-
+var markerf = L.marker([2.71638889, 9.86361111]).addTo(map);
 // Osm Layer
 var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -126,7 +126,7 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     googleSat.addTo(map);
 
     //concession du port autonome de kribi
-   
+    
 
     // faire le tableau dans le popup
 
@@ -444,6 +444,7 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         map.removeLayer(ge);
         concessdata.addTo(map);
         concessdata.bindPopup('-'+feature.properties.Cat_Conces+'-');
+       
     }
 
     if(document.getElementById('tpe').checked)
@@ -525,7 +526,7 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
      // scale
 
      L.control.scale().addTo(map);
-
+     var marker = L.marker([2.71638889, 9.86361111]).addTo(map);
     // draw geometry
 /*
     var drawnFeatures = new L.FeatureGroup();

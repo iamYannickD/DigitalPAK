@@ -22,7 +22,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
 
    <link rel="stylesheet" href="css/style.css">
-
+   <link rel="stylesheet" href="css/pop.css">
     <title>Training JavaScript</title>
 </head>
 <body>
@@ -62,19 +62,19 @@
 
                 <div id="categorie-list">
                     <div class="categorie-elt">
-                        <input type="radio" name="categorie" id="tous">
+                        <input type="radio" name="categorie" id="tous" onclick="charge()">
                         <label for="tous">Tous</label>
                     </div>
                     <div class="categorie-elt">
-                        <input type="radio" name="categorie" id="tpe">
+                        <input type="radio" name="categorie" id="tpe" onclick="charge()">
                         <label for="tpe">TPE</label>
                     </div>
                     <div class="categorie-elt">
-                        <input type="radio" name="categorie" id="pe">
-                        <label for="pe">PE</label>
+                        <input type="radio" name="categorie" id="me" onclick="charge()">
+                        <label for="pe">ME</label>
                     </div>
                     <div class="categorie-elt">
-                        <input type="radio" name="categorie" id="ge">
+                        <input type="radio" name="categorie" id="ge" onclick="charge()">
                         <label for="ge">GE</label>
                     </div>
                 </div>
@@ -86,14 +86,14 @@
             <div id="search-content">
                 <div style="margin-left: 15px;">Par Numero d'Identifiant Unique</div>
                 <div class="search-box">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <input type="search" name="" id="search-by-id">
+                    <i class="fa fa-search" aria-hidden="true" onclick="search()"></i>
+                    <input type="search" name="" id="search-by-id" >
                 </div>
 
                 <div style="margin-left: 15px;">Par Numero de Concession</div>
                 <div class="search-box">
                     <i class="fa fa-search" aria-hidden="true"></i>
-                    <input type="search" name="" id="search-by-id">
+                    <input type="search" name="" id="search-bby-id">
                 </div>
             </div> 
         </div>

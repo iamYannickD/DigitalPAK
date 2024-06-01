@@ -49,7 +49,7 @@ function process() {
     else
         // if the connection is busy, try again after one second 
         setTimeout('process()', 1000);
-    window.location = './adddata.php';
+    window.location = './infospoints.php';
 }
 // callback function executed when a message is received from the 
 //server
@@ -70,7 +70,7 @@ function handleServerResponse() {
             // display the data received from the server
             alert(helloMessage)
             // restart sequence
-            setTimeout('process()', 0);
+           
         }
         // a HTTP status different than 200 signals an error
         else {
@@ -86,7 +86,7 @@ var map = L.map('map', {
 }).setView([2.71638889, 9.86361111], 15);
 map.zoomControl.setPosition('topleft');
 map.options.minZoom = 14;
-map.on('click', placerMarqueur);
+
 // Osm Layer
 var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -98,8 +98,7 @@ var osmHOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'
     maxZoom: 19,
     attribution: '© OpenStreetMap contributors, Tiles style by Humanitarian OpenStreetMap Team hosted by OpenStreetMap France'
 });
-var lat = 2.71638889, lon = 9.86361111;
-var marker = L.marker([2.71638889, 9.86361111]).addTo(map);
+
 
 //google street
 googleStreets = L.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}', {
@@ -110,12 +109,7 @@ googleStreets = L.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}',
 
 
 //fonction pour cliquer
-function placerMarqueur(e) {
-    marker.setLatLng(e.latlng);
-    lat = e.latlng.lat;
-    lon = e.latlng.lng;
 
-};
 
 //google Sat
 googleSat = L.tileLayer('http://{s}.google.com/vt?lyrs=s&x={x}&y={y}&z={z}', {
